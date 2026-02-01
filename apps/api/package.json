@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "dev": "ts-node src/dev.ts",
-        "build": "tsc"
+        "build": "tsc",
+        "start": "node dist/src/dev.js"
     },
     "dependencies": {
         "@fastify/cors": "^9.0.0",

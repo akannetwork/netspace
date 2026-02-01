@@ -10,7 +10,7 @@ export async function middleware(request: NextRequest) {
 
     // Define main domains (Production & Localhost)
     const isLocalhost = hostname === 'localhost';
-    const isMainDomain = hostname === 'hauze.tr' || hostname === 'www.hauze.tr';
+    const isMainDomain = hostname === 'netspace.tr' || hostname === 'www.netspace.tr';
 
     // 1. Root Domain (Admin/Pro/Main Separation) or Localhost specific logic
     if (isMainDomain || isLocalhost) {

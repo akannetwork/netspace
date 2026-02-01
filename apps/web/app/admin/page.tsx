@@ -96,7 +96,7 @@ export default function AdminPage() {
         <div className="p-10 font-sans bg-gray-50 min-h-screen text-gray-900">
             <header className="mb-8">
                 <h1 className="text-3xl font-bold text-red-700">Master Admin Terminal</h1>
-                <p className="text-gray-600">terminal.hauze.tr / terminal.localhost</p>
+                <p className="text-gray-600">terminal.netspace.tr / terminal.localhost</p>
             </header>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

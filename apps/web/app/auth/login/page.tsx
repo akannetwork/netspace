@@ -29,7 +29,7 @@ export default function LoginPage() {
         <div className="min-h-screen flex items-center justify-center bg-gray-50 font-mono">
             <div className="max-w-md w-full bg-white p-8 rounded-xl shadow-lg border border-gray-100">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Hauze Pro Panel</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 tracking-tight">Netspace Pro Panel</h2>
                     <p className="text-xs text-gray-500 mt-2 uppercase tracking-widest font-bold">Giriş Yap</p>
                 </div>
 
