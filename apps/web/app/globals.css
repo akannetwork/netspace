@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-phone-number-input/style.css';
+
+
+:root {
+    --sm: 6px;
+    --tsm: 12px;
+
+    --inputHeight: 42px;
+}
+
+body {
+    background: #fdfdfd;
+}
+
+
+/* Modal Container */
+/* Modal Container */
+.globalModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    /* Mobile default: Bottom */
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0;
+    /* Full bleed */
+}
+
+@media (min-width: 768px) {
+    .globalModal {
+        align-items: center;
+        /* Desktop: Center or Right via Modal class */
+        justify-content: flex-end;
+        /* Desktop Default: Right */
+    }
+}
+
+.globalModal .modalHeader {
+    background-color: white;
+    padding: 0px 18px;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.globalModal .modalHeader h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.globalModal .modalContent {
+    background-color: white;
+    /* Default Mobile Styles */
+    width: 100%;
+    max-width: 100%;
+    height: 90%;
+    max-height: 90vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+    .globalModal .modalContent {
+        /* Desktop Right Drawer Styles */
+        width: 100%;
+        max-width: 50%;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Override for Center Modal */
+    .globalModal.modal-center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .globalModal.modal-center .modalContent {
+        width: 100%;
+        max-width: 600px;
+        /* Standard wide modal */
+        height: auto;
+        max-height: 85vh;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.globalModal .modalBody {
+    overflow-y: auto;
+    padding: 18px;
+}
+
+.globalModal .modalFooter {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.listItem {
+    padding: 8px 12px;
+    border: 1px solid #efefef;
+    border-radius: var(--sm);
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        border: 1px solid blue;
+    }
+
+    .tag-sm {
+        padding: 0px 6px;
+        border-radius: var(--sm);
+        font-size: var(--tsm);
+        width: fit-content;
+    }
+}
+
+
+
+
+/* Mobile Handle Bar */
+/* Mobile Handle Bar */
+.mobile-handle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-handle {
+        display: block;
+        width: 40px;
+        height: 3px;
+        background-color: #e5e7eb;
+        border-radius: 99px;
+        margin: 12px auto;
+        cursor: grab;
+    }
+}
+
+
+/* Input */
+input {
+    border: 1px solid #efefef;
+    border-radius: var(--sm);
+    padding: 0px 12px;
+    height: var(--inputHeight);
+    width: 100%;
+}
+
+textarea {
+    border: 1px solid #efefef;
+    border-radius: var(--sm);
+    padding: 8px 12px;
+    width: 100%;
+}
+
+.button {
+    border: 1px solid #efefef;
+    border-radius: var(--sm);
+    padding: 0px 12px;
+    height: var(--inputHeight);
+    min-width: var(--inputHeight);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        border: 1px solid blue;
+    }
+}
+
+.button-square {
+    width: fit-content;
+}
+
+.button-primary {
+    background-color: blue;
+    color: white;
+}
+
+.button-primary-outline {
+    border: 1px solid blue;
+    color: blue;
+}
+
+.fit-content {
+    width: fit-content;
+}
